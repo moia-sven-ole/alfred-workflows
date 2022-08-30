@@ -1,0 +1,12 @@
+export const HOME = process.env.HOME ?? '~';
+// const path = `${HOME}/scripts/alfred`;
+const path = `${__dirname}`;
+const assets = `${path}/assets`;
+export const pwgenIcon = `${assets}/pwgen.png`;
+export const autocompleteIcon = `${assets}/autocomplete.png`;
+export const braveIcon = `${assets}/brave.png`;
+export const grafanaIcon = `${assets}/grafana.png`;
+export const kibanaIcon = `${assets}/kibana.png`;
+export const cmdIcon = `${assets}/cmd.png`;
+export const timeIcon = `${assets}/time.png`;
+// export const duckHome = `${HOME}/Library/Application Support/Alfred/Alfred.alfredpreferences/workflows/duckcomplete`;
