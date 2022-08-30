@@ -142,7 +142,7 @@ node ./build/autocomplete/duckcomplete.js $QUERY</string>
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
-				<string></string>
+				<string>Generating...</string>
 				<key>script</key>
 				<string># set path to node in bashrc
 source ~/.bashrc
@@ -153,9 +153,9 @@ node ./build/pwgen/pwgen.js $QUERY</string>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string></string>
+				<string>type length of your password</string>
 				<key>title</key>
-				<string></string>
+				<string>Password Generator</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -223,6 +223,10 @@ node ./build/pwgen/pwgen.js $QUERY</string>
 	</dict>
 	<key>userconfigurationconfig</key>
 	<array/>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>1.0.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/moia-sven-ole/alfred-workflows</string>
 </dict>

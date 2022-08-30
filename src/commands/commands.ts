@@ -2,7 +2,7 @@ import * as fs from 'fs';
 
 import { z } from 'zod';
 
-import { cmdIcon, HOME } from '../config/config';
+import { cmdIcon } from '../config/config';
 import type { Alfred } from '../types/types';
 import { alfredHandler } from '../types/types';
 
@@ -12,7 +12,7 @@ const commandSchema = z.object({
 });
 
 const handleInput = (argv: string[]) => {
-  const plainConfig: unknown = JSON.parse(fs.readFileSync(`${HOME}/scripts/alfred/config/commands.json`, 'utf-8'));
+  const plainConfig: unknown = JSON.parse(fs.readFileSync(`./config/commands.json`, 'utf-8'));
   if (!(plainConfig instanceof Array)) return;
   const config = plainConfig.map((item) => commandSchema.parse(item));
   // TODO use filter function
