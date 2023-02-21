@@ -9,14 +9,13 @@ const getDate = (payload: string) => {
   return d1;
 };
 
-export const commands = ['encode', 'decode', 'unique', 'deepl', 'wrap', 'sort', 'ts', 'date'] as const;
+export const commands = ['encode', 'decode', 'unique', 'wrap', 'sort', 'ts', 'date'] as const;
 export type ToolCommands = typeof commands[number];
 export const isCommand = (value: string): value is ToolCommands => commands.filter((it) => it === value).length === 1;
 export const commandFunction: Record<ToolCommands, (value: string) => string> = {
   encode: (value: string) => Buffer.from(value, 'utf-8').toString('base64'),
   decode: (value: string) => Buffer.from(value, 'base64').toString('utf-8'),
   unique: (value: string) => uniq(value.split('\n')).join('\n'),
-  deepl: (value: string) => value,
   wrap: (value: string) =>
     value
       .split('\n')
