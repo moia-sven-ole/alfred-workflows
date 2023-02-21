@@ -10,7 +10,10 @@
     "lint": "eslint ./src/",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
-    "alfred:install": "yarn ts-node src/installAlfred.ts"
+    "clean": "rm -rf node_modules && rm -rf build && rm -rf tsconfig.tsbuildinfo",
+    "ib": "yarn install && yarn build",
+    "alfred:install": "yarn ib && yarn ts-node src/installAlfred.ts",
+    "alfred:clean:install": "yarn clean && yarn ib && yarn ts-node src/installAlfred.ts"
   },
   "license": "MIT",
   "devDependencies": {
